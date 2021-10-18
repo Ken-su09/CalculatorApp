@@ -13,15 +13,30 @@
         app:layout_constraintBottom_toTopOf="@+id/view_center_in_parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.AppCompatEditText
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/calculation_text_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/calculation_edit_text"
             android:background="@color/transparent"
             android:gravity="bottom|end"
             android:inputType="number"
             android:paddingEnd="10dp"
             android:paddingBottom="15dp"
-            android:text="1510960 + 4196809"
+            android:textColor="@color/lightGrey"
+            android:textSize="30sp"
+            android:textStyle="italic" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/calculation_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/transparent"
+            android:gravity="bottom|end"
+            android:inputType="number"
+            android:paddingEnd="10dp"
+            android:paddingBottom="15dp"
             android:textColor="@color/white"
             android:textSize="30sp"
             android:textStyle="bold" />
@@ -64,11 +79,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerInParent="true"
-                    android:layout_margin="25dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginBottom="15dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginBottom="25dp"
                     app:srcCompat="@drawable/ic_c" />
 
             </RelativeLayout>

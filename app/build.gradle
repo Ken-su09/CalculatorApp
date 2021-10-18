@@ -56,10 +56,6 @@ dependencies {
     debugImplementation("androidx.test:runner:1.4.0")
     debugImplementation("androidx.test.espresso:espresso-intents:3.4.0")
 
-    // Navigation Component
-    implementation("androidx.navigation:navigation-fragment-ktx:2.3.5")
-    implementation("androidx.navigation:navigation-ui-ktx:2.3.5")
-
     // MVVM
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0-rc01'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.0-rc01'
