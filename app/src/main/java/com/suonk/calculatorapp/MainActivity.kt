@@ -53,12 +53,13 @@ class MainActivity : AppCompatActivity() {
     private fun eraseClick() {
         binding.apply {
             delete.setOnClickListener {
-                if (calculationEditText.text?.isNotEmpty()!!) {
-                    calculationEditText.text?.replace(
-                        calculationEditText.text?.lastIndex!!,
-                        calculationEditText.text?.lastIndex!!,
-                        ""
-                    )
+                if (listOfNumbers.isNotEmpty()){
+                    listOfNumbers.removeAt(listOfNumbers.indices.last)
+                    calculationEditText.text?.clear()
+
+                    for (i in listOfNumbers.indices) {
+                        calculationEditText.text?.insert(i, listOfNumbers[i])
+                    }
                 }
             }
         }
